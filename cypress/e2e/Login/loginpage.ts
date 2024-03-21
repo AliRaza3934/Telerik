@@ -10,6 +10,13 @@ class Login{
         lastNameField:()=>cy.get("#last-name"),
         compnayField:()=>cy.get("#company"),
         phoneField:()=>cy.get("#phone"),
+        countryOFResidence:()=>cy.get("kendo-combobox[id='country'] span[class='k-button-icon k-icon k-i-caret-alt-down']"),
+        typeFilter:()=>cy.get("#country > kendo-searchbar"),
+        createButton:()=>cy.get('#registerForm > div:nth-child(4) > button'),
+        agreedOption:()=>cy.get('#optInOutField'),
+        createButtons:()=>cy.get('#registerForm > div:nth-child(4) > button'),
+        verifyButton:()=>cy.get('#challenge-stage > div > label > span.ctp-label')
+
     }
   loginUser(){
  this.loginPageLocator.loginButton().click()
@@ -22,6 +29,13 @@ class Login{
  this.loginPageLocator.lastNameField().type('Raza')
  this.loginPageLocator.compnayField().type('ETA+')
  this.loginPageLocator.phoneField().type('+00924567892')
+ this.loginPageLocator.countryOFResidence().click()
+ this.loginPageLocator.typeFilter().type('Germany')
+ this.loginPageLocator.createButton().click()
+ this.loginPageLocator.agreedOption().click()
+ this.loginPageLocator.createButton().click()
+ .wait(4000)
+ this.loginPageLocator.verifyButton().click()
 
   }
 }
