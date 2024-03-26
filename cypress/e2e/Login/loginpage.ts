@@ -36,6 +36,7 @@ class Login{
  this.loginPageLocator.createButton().click()
  .wait(4000)
  this.loginPageLocator.verifyButton().click()
+ 
 
   }
 }
