@@ -14,8 +14,8 @@ class Web{
      this.webLocator.webNavigator().click()
      this.webLocator.kendoUI().click()
      .wait(300)
-     //this.webLocator.gridLocator().click()
-     //this.webLocator.chartLocator().click()
+     this.webLocator.gridLocator().click()
+     this.webLocator.chartLocator().click()
      this.webLocator.sheduleLocator().click()
   } 
 }
